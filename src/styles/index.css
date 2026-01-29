@@ -1,11 +1,75 @@
-/* 
+.todo-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  background: #e5eff5;
+  font-family: Arial, sans-serif;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.todo-card {
+  width: 520px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
 
-*/
+.todo-title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 200;
+  color: #645ad9;
+  margin: 25px 0 10px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 16px 18px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item,
+.todo-empty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+}
+
+.todo-empty {
+  color: #999;
+  font-style: italic;
+}
+
+.todo-delete {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.todo-item:hover .todo-delete {
+  opacity: 1;
+}
+
+.todo-footer {
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #888;
+}
